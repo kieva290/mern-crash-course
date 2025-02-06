@@ -1,0 +1,32 @@
+node-tools:
+To check the current node version installed on your system:
+
+# node -v
+# v14.15.0
+Enter the given below commands to delete Node from your system:
+
+# cd /usr/local/include
+# sudo rm -R node
+# cd ../lib
+# sudo rm -R node_modules
+# cd ../bin
+# sudo rm -R node
+to check that node doesn't exist anymore
+
+# node -v
+# -bash: node: command not found
+-----------------
+Install Node.js on macOS Monterey version 12.0.1
+Download the LTS version of node from the official website (https://nodejs.org/en/)
+Double click on the node-v16.13.1.pkg installation package and continue with the default settings
+
+Type node -v in your terminal to print the current installed version of node : v22.13.1 & npm -v to print the current npm version installed on your machine : 10.9.2
+---------------
+// mongodb database
+// username: "kieva290"
+// password: "jD5CzhPfBsJtfGKJ
+// connection string: "mongodb+srv://kieva290:jD5CzhPfBsJtfGKJ@cluster0.yimfj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+// kill a process runing on a port
+//  $ lsof -i tcp:3000
+//  $ kill -9 PID
