@@ -27,7 +27,7 @@ export const useProductStore = create((set) => ({
     },
 
     deleteProduct: async (pid) => {
-        const res = await fetch('/api/products/${pid}', {
+        const res = await fetch(`/api/products/${pid}`, {
             method: "DELETE",
         });
         const data = await res.json();
@@ -38,13 +38,13 @@ export const useProductStore = create((set) => ({
         return { success: true, message: data.message };
     },
     
-    updateProduct: async (pid, updateProduct) => {
-        const res = await fetch('/api/products/${pid}', {
+    updateProduct: async (pid, updatedProduct) => {
+        const res = await fetch(`/api/products/${pid}`, {
             method: "PUT",
             headers:{
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(updateProduct),
+            body: JSON.stringify(updatedProduct),
         });
         const data = await res.json();
         if (!data.success) return { success: false, message: data.message };
